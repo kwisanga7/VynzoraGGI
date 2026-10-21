@@ -4,48 +4,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#010409">
   <meta name="description" content="VynzoraGGI helps adults meet with intention, care and respect.">
-  <title>VynzoraGGI — Meet with intention</title>
+  <title>VynzoraGGI — Community</title>
   <link rel="stylesheet" href="{% static 'css/site.css' %}">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="/" aria-label="VynzoraGGI home"><span class="brand-mark">V</span> Vynzora<span>GGI</span></a>
-    <nav aria-label="Main navigation"><a href="#how">How it works</a><a href="#safety">Trust &amp; safety</a><a href="#updates">Updates</a></nav>
-    <a class="button button-small" href="#join">Get started <span aria-hidden="true">↗</span></a>
+  <header class="topbar">
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar"><span></span><span></span><span></span></button>
+    <a class="brand" href="/" aria-label="VynzoraGGI home"><span class="brand-mark">V</span><span>VynzoraGGI</span></a>
+    <span class="topbar-title">Community</span>
+    <form class="search" role="search" action="#updates"><span class="search-icon" aria-hidden="true">⌕</span><input type="search" aria-label="Search VynzoraGGI" placeholder="Search updates and guidance"><kbd>/</kbd></form>
+    <div class="topbar-actions"><button class="panel-toggle" id="panel-toggle" type="button" aria-label="Toggle information panel" aria-expanded="false" aria-controls="right-sidebar"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="3" width="15" height="14" rx="2"></rect><path d="M12.5 3v14"></path></svg></button><a class="signin" href="#join">Sign in</a><a class="button button-primary button-compact" href="#join">Join VynzoraGGI <span aria-hidden="true">↗</span></a></div>
   </header>
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> A more thoughtful way to meet</p>
-        <h1>Good connections<br>begin <em>with intention.</em></h1>
-        <p class="intro">Meet people from different places who are ready for something meaningful. Take your time, get to know one another, and build a connection at your own pace.</p>
-        <div class="hero-actions"><a class="button" href="#join">Join the community <span aria-hidden="true">→</span></a><a class="text-link" href="#how">Explore how it works <span aria-hidden="true">↓</span></a></div>
-        <div class="hero-note"><span class="lock-icon">⌑</span><span><strong>Adults only</strong><br>Designed for people aged 18 and over</span></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <nav class="side-nav" aria-label="Community navigation">
+        <a class="side-link active" href="#home"><span class="nav-icon">⌂</span> Home</a>
+        <a class="side-link" href="#discover"><span class="nav-icon">◎</span> Discover</a>
+        <a class="side-link" href="#how"><span class="nav-icon">◇</span> How it works</a>
+        <a class="side-link" href="#safety"><span class="nav-icon">◈</span> Safety &amp; guidelines</a>
+      </nav>
+      <div class="sidebar-rule"></div>
+      <div class="sidebar-heading"><span>Getting started</span><span class="sidebar-plus">+</span></div>
+      <div class="journey-list">
+        <a href="#join"><span class="journey-number">1</span><span><strong>Build your profile</strong><small>Share what matters to you</small></span></a>
+        <a href="#safety"><span class="journey-number">2</span><span><strong>Verify your identity</strong><small>Help keep the community genuine</small></span></a>
+        <a href="#discover"><span class="journey-number">3</span><span><strong>Meet with intention</strong><small>Connect across different areas</small></span></a>
       </div>
-      <div class="hero-art" aria-label="Illustration of two people connecting across places">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="sun"></div><div class="place-card place-left"><span class="place-dot"></span><span>Different places</span></div>
-        <div class="portrait portrait-one"><span class="portrait-head"></span><span class="portrait-body"></span></div>
-        <div class="portrait portrait-two"><span class="portrait-head"></span><span class="portrait-body"></span></div>
-        <div class="heart">♥</div><div class="place-card place-right"><span class="place-dot"></span><span>One meaningful start</span></div>
-        <div class="art-caption">Make room for a real connection</div>
+      <div class="sidebar-bottom"><span class="online-dot"></span><span>Built for adults 18+</span><span class="sidebar-lock">⌑</span></div>
+    </aside>
+    <button class="sidebar-backdrop" id="sidebar-backdrop" type="button" tabindex="-1" aria-label="Close navigation"></button>
+    <main class="workspace" id="home">
+      <div class="workspace-head"><div class="breadcrumbs"><span>VynzoraGGI</span><span class="crumb-slash">/</span><strong>Community</strong></div><span class="preview-pill"><span></span> Preview</span></div>
+      <div class="dashboard-grid">
+        <div class="main-column">
+          <section class="greeting" id="discover"><span class="greeting-icon">V</span><div><p class="kicker">A PLACE TO MEET WITH INTENTION</p><h1>Good connections begin here.</h1><p>Discover a more thoughtful way to meet people from different places.</p></div></section>
+          <section class="welcome-panel panel">
+            <div class="panel-toolbar"><span class="panel-mark">V</span><span>VynzoraGGI community</span><span class="toolbar-spacer"></span><span class="status-label"><i></i> Preview</span></div>
+            <div class="welcome-copy"><p class="welcome-eyebrow">MEET WITH CARE · CONNECT WITH PURPOSE</p><h2>Your next chapter<br><span>starts with a hello.</span></h2><p>Make a profile that reflects who you are, learn how we keep the community respectful, and meet adults looking for meaningful connections.</p><div class="welcome-actions"><a class="button button-primary" href="#join">Get started <span>→</span></a><a class="quiet-link" href="#how">See how it works <span>↗</span></a></div></div>
+            <div class="welcome-meta"><span><b class="meta-check">✓</b> Adults 18+</span><span><b class="meta-shield">◈</b> Identity checks planned</span><span><b class="meta-user">@</b> Your public username</span></div>
+            <div class="welcome-decoration" aria-hidden="true"><div class="decoration-ring ring-a"></div><div class="decoration-ring ring-b"></div><div class="decoration-star">✳</div><div class="decoration-heart">♡</div></div>
+          </section>
+          <section class="panel updates-panel" id="updates">
+            <div class="section-heading"><div><h2>Latest updates</h2><p>News and notes from the VynzoraGGI team</p></div><a href="#updates">View all <span>→</span></a></div>
+            <article class="update-row"><div class="update-avatar">V</div><div class="update-content"><div class="update-byline"><strong>VynzoraGGI team</strong><span>·</span><time>Project update</time><span class="update-tag">BUILDING</span></div><h3>We’re building a more thoughtful way to meet.</h3><p>We’re starting with the essentials: a clear sign-up journey, helpful community guidance and tools that support safer connections.</p><a class="inline-link" href="#how">Read the product roadmap <span>↗</span></a></div><span class="update-menu" aria-hidden="true">···</span></article>
+          </section>
+          <section class="panel steps-panel" id="how">
+            <div class="section-heading"><div><h2>How it works</h2><p>A simple path from first visit to a real connection</p></div><a href="#safety">Community guide <span>→</span></a></div>
+            <div class="steps-grid"><article class="step"><span class="step-icon">01</span><h3>Learn the basics</h3><p>Explore our guidance, expectations and safety approach before joining.</p></article><article class="step"><span class="step-icon">02</span><h3>Create your profile</h3><p>Sign up step by step. Your real name stays private; your username is public.</p></article><article class="step"><span class="step-icon">03</span><h3>Find your people</h3><p>Discover adults from different areas and connect at a pace that feels right.</p></article></div>
+          </section>
+          <section class="panel safety-panel" id="safety"><div class="safety-symbol">◈</div><div><h2>Trust belongs in every step.</h2><p>VynzoraGGI is intended for adults 18 and over. Identity and profile-photo checks are planned to support genuine profiles. Your legal name is not intended for public display.</p><a class="inline-link" href="#join">Read safety guidance <span>↗</span></a></div><span class="safety-badge">SAFETY FIRST</span></section>
+        </div>
+        <aside class="right-column" id="right-sidebar" aria-label="Community information">
+          <section class="event-card panel"><div class="event-art"><span class="event-orbit orbit-one"></span><span class="event-orbit orbit-two"></span><span class="event-spark">✳</span><span class="event-heart">♡</span><span class="event-label">VYNZORAGGI · COMMUNITY</span></div><div class="event-title"><span>Welcome to</span><h2>VynzoraGGI</h2><span class="event-flower">✳</span></div><div class="event-description">A thoughtful place to meet, connect and grow together.</div><a class="event-cta" href="#how">Explore the community <span>→</span></a></section>
+          <section class="panel eligibility-panel"><div class="right-panel-title"><h2>Before you join</h2><span class="info-dot">i</span></div><ul><li><span class="list-check">✓</span><span><strong>18 years or older</strong><small>We’ll check age during registration.</small></span></li><li><span class="list-check">✓</span><span><strong>Real people, real profiles</strong><small>Identity and photo verification are planned.</small></span></li><li><span class="list-check">✓</span><span><strong>Respect is expected</strong><small>Everyone follows our community guidance.</small></span></li></ul><a class="inline-link" href="#safety">Read the safety guide <span>↗</span></a></section>
+          <section class="panel changelog-panel"><div class="right-panel-title"><h2>From the team</h2><a href="#updates">More</a></div><div class="timeline"><article><span class="timeline-dot"></span><time>JUST STARTING</time><h3>Welcome to the VynzoraGGI preview</h3><p>We’re laying the foundation for intentional connections.</p></article><article><span class="timeline-dot"></span><time>UP NEXT</time><h3>Guided registration</h3><p>Step-by-step profile creation and verification.</p></article><article><span class="timeline-dot"></span><time>ON THE ROADMAP</time><h3>More ways to connect</h3><p>Discovery, matching and member safety tools.</p></article></div></section>
+          <section class="join-card"><p class="kicker">READY WHEN YOU ARE</p><h2>Start with a hello.</h2><p>Join the list for news as the community takes shape.</p><a href="#join">Get started <span>→</span></a></section>
+        </aside>
       </div>
-    </section>
-    <section class="ticker" aria-label="Our values"><span>REAL PEOPLE</span><i>✳</i><span>RESPECTFUL CONNECTIONS</span><i>✳</i><span>YOUR PACE, YOUR CHOICE</span><i>✳</i><span>REAL PEOPLE</span></section>
-    <section class="section intro-section" id="how">
-      <div><p class="eyebrow">A clear path to connection</p><h2>Start with trust.<br><em>Then see where it goes.</em></h2></div>
-      <p class="section-lede">VynzoraGGI is being built to make meeting people feel clear, safe and human—from your first visit through every step of getting to know someone.</p>
-      <div class="steps">
-        <article class="step-card"><span class="step-number">01</span><span class="step-icon">◎</span><h3>Learn about us</h3><p>Read our community rules, terms and practical guidance before you decide to join.</p><a href="#safety">Our approach <span>↗</span></a></article>
-        <article class="step-card"><span class="step-number">02</span><span class="step-icon">⌁</span><h3>Create your profile</h3><p>Follow a guided, step-by-step sign-up. Your real name stays private; your chosen username is public.</p><a href="#join">Registration preview <span>↗</span></a></article>
-        <article class="step-card"><span class="step-number">03</span><span class="step-icon">♡</span><h3>Meet thoughtfully</h3><p>Discover people from other areas and make choices at a pace that feels right to you.</p><a href="#updates">What’s coming <span>↗</span></a></article>
-      </div>
-    </section>
-    <section class="safety-section" id="safety"><div class="safety-copy"><p class="eyebrow">Trust is part of the design</p><h2>Your privacy and<br><em>wellbeing come first.</em></h2><p>Profiles are intended to use a public username, while a member’s actual name remains private. Identity and profile-photo checks are part of the planned sign-up journey.</p><a class="text-link" href="#join">See the sign-up steps <span>→</span></a></div><div class="safety-list"><div><span class="check">✓</span><span><strong>18+ community</strong><small>Age eligibility is checked during registration.</small></span></div><div><span class="check">✓</span><span><strong>Guided verification</strong><small>Identity checks help keep profiles genuine.</small></span></div><div><span class="check">✓</span><span><strong>Respectful by design</strong><small>Clear community standards and safety guidance.</small></span></div><div><span class="check">✓</span><span><strong>Private by default</strong><small>Your legal name is not intended for public display.</small></span></div></div></section>
-    <section class="updates section" id="updates"><div><p class="eyebrow">From the VynzoraGGI team</p><h2>Good things take<br><em>a thoughtful start.</em></h2></div><article class="update-card"><span class="update-label">BUILDING IN PUBLIC · 01</span><h3>We’re shaping a better way to meet.</h3><p>We’re starting with the foundations: a welcoming experience, clear community guidance and a registration journey that explains each step.</p><span class="update-footer">More updates coming soon <span>↗</span></span></article></section>
-    <section class="join-banner" id="join"><div><p class="eyebrow">The beginning of something good</p><h2>Meet with care.<br><em>Connect with intention.</em></h2></div><div><p>VynzoraGGI is at the beginning of its journey. The next step is building the guided registration experience and the tools that help people connect safely.</p><a class="button button-light" href="#updates">Follow project updates <span>→</span></a></div><span class="banner-orb"></span></section>
-  </main>
-  <footer class="site-footer"><a class="brand" href="/"><span class="brand-mark">V</span> Vynzora<span>GGI</span></a><span>Meaningful connections, made with care.</span><span>© 2026 VynzoraGGI</span></footer>
+      <footer class="workspace-footer"><span>© 2026 VynzoraGGI</span><nav aria-label="Footer navigation"><a href="#safety">Community guidelines</a><a href="#safety">Terms &amp; conditions</a><a href="#safety">Privacy</a></nav><span>Made for meaningful connections <b>♡</b></span></footer>
+      <section class="join-anchor" id="join" aria-label="Join VynzoraGGI"><span class="online-dot"></span> Registration is coming soon. Follow the project updates above.</section>
+    </main>
+  </div>
+  <script>
+    const menuButton = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+    const panelButton = document.getElementById('panel-toggle');
+    const rightPanel = document.getElementById('right-sidebar');
+    menuButton.addEventListener('click', () => {
+      const isOpen = sidebar.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      backdrop.classList.toggle('is-visible', isOpen);
+    });
+    backdrop.addEventListener('click', () => {
+      sidebar.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      backdrop.classList.remove('is-visible');
+    });
+    panelButton.addEventListener('click', () => {
+      const isOpen = rightPanel.classList.toggle('is-open');
+      panelButton.setAttribute('aria-expanded', String(isOpen));
+    });
+    sidebar.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      sidebar.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      backdrop.classList.remove('is-visible');
+    }));
+    rightPanel.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      rightPanel.classList.remove('is-open');
+      panelButton.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
 </body>
 </html>
